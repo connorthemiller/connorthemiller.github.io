@@ -6,34 +6,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="authorization_endpoint" href="https://indieauth.com/auth">
   <link rel="token_endpoint" href="https://tokens.indieauth.com/token">
-  <!-- replace the below link with what aperture.p3k.io gives you after signing-in.
-    (Details: https://indieweb.org/Microsub#Getting_Started)
-    In summary:
-    1. sign in to https://aperture.p3k.io/login with your domain
-    2. you will see a <link> tag displayed on your dashboard
-    3. copy that <link> tag that looks like:
-      <link rel="microsub" href="https://aperture.p3k.io/microsub/000">
-      after this HTML comment. -->
-  <title>My New Website</title>
+  <title>connorthemiller</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
 <body>
-  <h1>My New Website</h1>
+  <h1>this is my domain</h1>
   <div class="h-card">
     <p>
       Hi, my name is <span class="p-name">Connor Miller</span> and I am a human on the Internet.
     </p>
-
+    <h2> {{ message }} </h2>
     <p>
       You can find me on other websites below:
     </p>
 
     <ul>
-      <!-- replace _mygithubid_ with your GitHub username -->
       <li><a class="u-url" href="https://github.com/connorthemiller" rel="me">@connorthemiller</a></li>
-      
-      <!-- replace _mytwitterid_ with your Twitter username (if you have one, if not, delete the <li>…</li>) -->
       <li><a class="u-url" href="https://twitter.com/connorthemiller" rel="me">@connorthemiller</a></li>
     </ul>
   </div>
+  <script>
+  console.log("hello world :o");
+
+  var app = new Vue({
+  el: "#app",
+  data: function() {
+    return {
+      message: "Hello Vue!"
+    };
+  }
+});
+
+  </script>
 </body>
 </html>
